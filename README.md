@@ -31,18 +31,13 @@ The server will start on port 3000 (or the PORT environment variable) and expose
 
 ## Available Tools
 
-### greeting
-Greets a person in a random language (English, Spanish, French).
+### cms_content_types
+Retrieves content type definitions from Optimizely CMS12. Lists all content types or fetches a specific content type by ID.
 
 **Parameters:**
-- `name` (required): Name of the person to greet
-- `language` (optional): Language for greeting (defaults to random)
-
-### todays-date
-Returns today's date in the specified format.
-
-**Parameters:**
-- `format` (optional): Date format (defaults to ISO format)
+- `cmsUrl` (required): Base URL of your Optimizely CMS12 instance (e.g., 'https://test9.optimizely.cc')
+- `authToken` (optional): Bearer token for authentication with the CMS API
+- `contentTypeId` (optional): Optional content type ID to retrieve a specific content type. If not provided, lists all content types.
 
 ### api_call
 HTTP client wrapper supporting various HTTP methods with custom headers.
@@ -53,18 +48,16 @@ HTTP client wrapper supporting various HTTP methods with custom headers.
 - `headers` (optional): Custom headers as JSON string
 - `body` (optional): Request body (for POST, PUT, PATCH methods)
 
-### rick-roll
-Returns a Rick Roll GIF URL for fun interactions.
+---
 
-**Parameters:**
-- No parameters required
+## Archived Demo Tools
 
-### sqlite-query
-Executes SQL queries against a SQLite database.
+The following demo tools have been moved to `src/tools/_archive/` and are not currently active. To re-enable them, uncomment the imports in `src/main.ts`.
 
-**Parameters:**
-- `query` (required): SQL query to execute
-- `params` (optional): Query parameters for prepared statements
+- **greeting** - Multi-language greetings
+- **todays-date** - Date formatting utility
+- **rick-roll** - Fun demo tool
+- **sqlite-query** - SQLite database queries
 
 ## Architecture
 
@@ -77,11 +70,13 @@ The application is designed to work in both traditional server environments and 
 src/
   main.ts          # Main application entry point (exports app for serverless)
   tools/           # Individual tool implementations
-    greeting.ts
-    todays-date.ts
     api-call.ts
-    rick-roll.ts
-    sqlite-query.ts
+    cms-content-types.ts
+    _archive/      # Archived demo tools
+      greeting.ts
+      todays-date.ts
+      rick-roll.ts
+      sqlite-query.ts
 vercel/
   index.ts         # Vercel serverless function entry point
 netlify/

@@ -25,10 +25,13 @@ const toolsService = new ToolsService(app);
 
 // Import tools
 import "./tools/api-call";
-import "./tools/greeting";
-import "./tools/rick-roll";
-import "./tools/sqlite-query";
-import "./tools/todays-date";
+import "./tools/cms-content-types";
+
+// Archived demo tools (uncomment to re-enable):
+// import "./tools/_archive/greeting";
+// import "./tools/_archive/rick-roll";
+// import "./tools/_archive/sqlite-query";
+// import "./tools/_archive/todays-date";
 
 // Export the Express app for serverless environments
 export { app };

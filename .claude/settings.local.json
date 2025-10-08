@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(move greeting.ts _archive )",
+      "Bash(move todays-date.ts _archive )",
+      "Bash(move rick-roll.ts _archive )",
+      "Bash(move sqlite-query.ts _archive)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
