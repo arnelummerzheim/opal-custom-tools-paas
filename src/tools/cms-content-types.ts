@@ -77,7 +77,7 @@ async function cmsContentTypes(parameters: CmsContentTypesParameters) {
 }
 
 tool({
-  name: "cms_content_types",
+  name: "paas_cms_content_types",
   description: "Retrieves content type definitions from Optimizely CMS12. Lists all content types or fetches a specific content type by ID. Use this to understand the structure and properties of content types in your CMS instance.",
   parameters: [
     {

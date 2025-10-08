@@ -27,6 +27,7 @@ const toolsService = new ToolsService(app);
 import "./tools/api-call";
 import "./tools/cms-content-types";
 import "./tools/cms-content-manifest";
+import "./tools/cms-content-delivery";
 
 // Archived demo tools (uncomment to re-enable):
 // import "./tools/_archive/greeting";

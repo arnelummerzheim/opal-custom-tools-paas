@@ -73,7 +73,7 @@ async function apiCall(parameters: ApiCallParameters) {
 }
 
 tool({
-  name: "api_call",
+  name: "paas_api_call",
   description: "Makes HTTP requests with support for GET, POST, PUT, PATCH, DELETE methods and custom headers",
   parameters: [
     {

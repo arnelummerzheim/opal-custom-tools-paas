@@ -81,7 +81,7 @@ async function cmsContentManifest(parameters: CmsContentManifestParameters) {
 }
 
 tool({
-  name: "cms_content_manifest",
+  name: "paas_cms_content_manifest",
   description: "Exports a complete manifest containing all content definitions from Optimizely CMS12 including content types, property groups, and editor definitions. Use this for environment comparison, backup/restore workflows, documentation generation, or migration planning.",
   parameters: [
     {
